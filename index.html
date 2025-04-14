@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WASM Reverse</title>
+</head>
+<body>
+    <h1>Rust + Wasm String Reverser</h1>
+    <input id="input" type="text" placeholder="Введите текст" />
+    <button onclick="reverse()">Reverse</button>
+    <p>Result: <span id="output"></span></p>
+
+    <script type="module">
+        import init, { reverse_string } from "./pkg/wasm_reverse.js";
+
+        async function run() {
+            await init();
+
+            window.reverse = function () {
+                const input = document.getElementById("input").value;
+                const output = reverse_string(input);
+                document.getElementById("output").textContent = output;
+            }
+        }
+
+        run();
+    </script>
+</body>
+</html>

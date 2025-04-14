@@ -1,0 +1,14 @@
+{
+  "name": "browser-wasm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-server": "dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dev-server": "^0.2.0"
+  }
+}
